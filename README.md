@@ -13,6 +13,7 @@ How to run:
 - Download the code
 - Ensure NodeJS is installed
 - Open a CLI (console, bash, etc) and navigate to where you downloaded the code.
+- Edit the `settings.json` file as you need it (API key, indicate if you are a paid member, where to put downloads, etc)
 - run `npm start`
 
 It will try to download the highest quality of the video available (HD > HQ > LQ). YouTube only videos (if there are any) are not supported.
