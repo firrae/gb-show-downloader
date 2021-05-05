@@ -9,4 +9,10 @@ Requirements:
 - NodeJS: https://nodejs.org/en/
 - Some JSON knowledege
 
+How to run:
+- Download the code
+- Ensure NodeJS is installed
+- Open a CLI (console, bash, etc) and navigate to where you downloaded the code.
+- run `npm start`
+
 I will be looking to bundle it into an Electron app that is easier to use at some point.
