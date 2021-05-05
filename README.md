@@ -15,4 +15,6 @@ How to run:
 - Open a CLI (console, bash, etc) and navigate to where you downloaded the code.
 - run `npm start`
 
+It will try to download the highest quality of the video available (HD > HQ > LQ). YouTube only videos (if there are any) are not supported.
+
 I will be looking to bundle it into an Electron app that is easier to use at some point.
