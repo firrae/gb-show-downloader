@@ -23,13 +23,13 @@ const fileDownload = async (url, name) => {
         })
         .on("error", (error) => {
             console.error(`Download failed: ${error.message}`);
-            throw new Error(`Download Failed: ${error.message}`);
+            throw new Error(error.message);
         });
 
     fileWriterStream
         .on("error", (error) => {
             console.error(`Could not write file to system: ${error.message}`);
-            throw new Error(`File Writing Failed: ${error.message}`);
+            throw new Error(error.message);
         })
         .on("finish", () => {
             console.log(`File downloaded to ${name}`);
