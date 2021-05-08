@@ -1,5 +1,6 @@
 const got = require("got");
 // const PProgress = require('p-progress');
+const filenamify = require('filenamify');
 const { createWriteStream, existsSync, mkdirSync } = require("fs");
 const stream = require("stream");
 const { promisify } = require("util");
@@ -10,7 +11,8 @@ const settings = require("../settings.json");
 const fileDownload = async (url, name) => {
     const keyedUrl = `${url}?api_key=${settings.api_key}`;
     const downloadStream = got.stream(keyedUrl);
-    const fileWriterStream = createWriteStream(`${settings.download_target}/${name}.${get_url_extension(url)}`);
+    const fileName = filenamify(`${settings.download_target}/${name}.${get_url_extension(url)}`, { replacement: '-' });
+    const fileWriterStream = createWriteStream(fileName);
 
     // progress(1/10);
 
