@@ -22,13 +22,13 @@ const fileDownload = async (url, name) => {
             console.error(`${name} progress: ${transferred}/${total} (${percentage}%)`);
         })
         .on("error", (error) => {
-            console.error(`Download failed: ${error.message}`);
+            console.error(error.message);
             throw new Error(error.message);
         });
 
     fileWriterStream
         .on("error", (error) => {
-            console.error(`Could not write file to system: ${error.message}`);
+            console.error(error.message);
             throw new Error(error.message);
         })
         .on("finish", () => {
