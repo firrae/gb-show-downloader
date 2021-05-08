@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "got": "^11.8.2",
-    "p-progress": "^0.5.1"
+    "p-progress": "^0.5.1",
+    "filenamify": "^4.3.0"
   }
 }
